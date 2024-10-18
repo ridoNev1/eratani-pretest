@@ -24,7 +24,7 @@ const Navbar = () => {
         <Image
           src={isScrolled ? MainLogo : MainWhiteLogo}
           alt="main-logo"
-          className="lg:max-w-36"
+          className="lg:max-w-36 max-w-28"
         />
         <div
           className={`fixed left-0 lg:static w-full lg:w-auto transition-all duration-300 lg:h-auto lg:bg-transparent h-screen bg-black/30 ${
