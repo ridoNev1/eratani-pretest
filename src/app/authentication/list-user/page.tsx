@@ -14,6 +14,7 @@ import axiosInstance from "@/lib/axios-config";
 import { ReloadIcon } from "@radix-ui/react-icons";
 import { AxiosError } from "axios";
 import { useEffect, useState } from "react";
+import { Badge } from "@/components/ui/badge";
 
 interface IUserData {
   email: string;
@@ -85,7 +86,15 @@ const ListUser = () => {
                     <TableCell className="font-medium">{el.name}</TableCell>
                     <TableCell>{el.email}</TableCell>
                     <TableCell>{el.gender}</TableCell>
-                    <TableCell className="text-right">{el.status}</TableCell>
+                    <TableCell className="text-right">
+                      {el.status === "inactive" ? (
+                        <Badge variant="destructive">{el.status}</Badge>
+                      ) : (
+                        <Badge variant="default" className="bg-main-green">
+                          {el.status}
+                        </Badge>
+                      )}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>

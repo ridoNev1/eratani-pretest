@@ -33,6 +33,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { AxiosError } from "axios";
 import { ReloadIcon } from "@radix-ui/react-icons";
+import { useRouter } from "next/navigation";
 interface IFormData {
   name: string;
   email: string;
@@ -53,6 +54,7 @@ const formSchema = z.object({
 
 const Register = () => {
   const { toast } = useToast();
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -74,7 +76,7 @@ const Register = () => {
         toast({
           description: "Pendaftaran kamu berhasil",
         });
-      setLoading(false);
+      router.push("/authentication/list-user");
     } catch (error) {
       if (error instanceof AxiosError) {
         toast({
