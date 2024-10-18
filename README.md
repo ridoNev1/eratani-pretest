@@ -5,6 +5,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+clone project
+npm install
+
+add .env.local
+NEXT_PUBLIC_API_URL=https://gorest.co.in/public/v2
+NEXT_PUBLIC_API_TOKEN=UR_GOREST_TOKEN
+
 npm run dev
 # or
 yarn dev
