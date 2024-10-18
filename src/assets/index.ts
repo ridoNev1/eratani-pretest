@@ -20,6 +20,7 @@ import LinkedInIco from "@/assets/ornament/linkedin-ico.svg";
 import InstaIco from "@/assets/ornament/ig-ico.svg";
 import TiktokIco from "@/assets/ornament/tiktok-ico.svg";
 import YoutubeIco from "@/assets/ornament/youtube-ico.svg";
+import MenuIco from "@/assets/ornament/menu-ico.svg";
 
 export {
   MainLogo,
@@ -44,4 +45,5 @@ export {
   LinkedInIco,
   TiktokIco,
   YoutubeIco,
+  MenuIco,
 };

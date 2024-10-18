@@ -14,7 +14,7 @@ const LocationFeedback = () => {
     lng: 106.843239,
   });
   return (
-    <div className="custom-container-xl gap-8 pb-16 text-main-text grid grid-cols-[1.5fr,1fr]">
+    <div className="custom-container-xl gap-8 pb-16 text-main-text grid px-4 lg:px-0 lg:grid-cols-[1.5fr,1fr]">
       <div className="relative">
         <div className="w-full h-[65vh]">
           <APIProvider apiKey={GOOGLE_MAPS_API_KEY}>

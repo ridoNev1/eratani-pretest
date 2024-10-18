@@ -13,9 +13,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="bg-main-green text-white/95">
-      <div className="custom-container-xl py-10">
+      <div className="custom-container-xl px-6 lg:px-0 py-10">
         <Image src={MainWhiteLogo} alt="main-logo" className="max-w-36" />
-        <div className="grid grid-cols-[2fr,4fr,1fr] gap-24">
+        <div className="grid grid-cols-2 lg:grid-cols-[2fr,4fr,1fr] gap-24">
           <div className="mt-8 text-sm">
             <p className="mb-8 leading-7">
               Jl. Casablanca Raya Kav 88, Kel. Menteng Dalam, Kec. Tebet, Gedung

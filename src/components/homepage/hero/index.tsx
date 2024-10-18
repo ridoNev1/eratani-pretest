@@ -48,16 +48,16 @@ const Hero = () => {
           align: "start",
           loop: true,
         }}
-        className="w-full custom-container-xl"
+        className="lg:px-0 px-10 w-full custom-container-xl"
       >
         <CarouselContent>
           {Array.from({ length: arrLength }).map((_, index) => (
             <CarouselItem key={index}>
               <div className="text-center flex flex-col items-center gap-y-8">
-                <h1 className="text-5xl font-semibold text-white">
+                <h1 className="text-2xl lg:text-5xl font-semibold text-white">
                   #SelaluAdaUntukPetani
                 </h1>
-                <h3 className="text-4xl leading-[48px] font-medium text-white/95 max-w-screen-lg">
+                <h3 className="lg:text-4xl lg:leading-[48px] font-medium text-white/95 max-w-screen-lg">
                   Eratani adalah perusahaan startup Agri-tech yang fokus
                   membangun sebuah ekosistem pertanian yang kuat dengan
                   mendigitalisasi proses pertanian dari hulu hingga ke hilir.
@@ -77,7 +77,7 @@ const Hero = () => {
             onClick={() => handleDotClick(indx)}
             className={`${
               current - 1 === indx ? "bg-primary-yellow" : "bg-gray-400"
-            } w-16 h-3 rounded-full cursor-pointer`}
+            }  w-10 lg:w-16 h-2 lg:h-3 rounded-full cursor-pointer`}
           ></div>
         ))}
       </div>

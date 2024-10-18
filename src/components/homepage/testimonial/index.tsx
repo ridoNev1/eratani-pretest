@@ -41,7 +41,7 @@ const Testimonial = () => {
   return (
     <div className="custom-container-xl py-16 text-main-text relative">
       <div className="flex justify-center">
-        <h2 className="text-5xl mb-16 text-center font-semibold text-main-green max-w-2xl">
+        <h2 className="text-3xl lg:text-5xl mb-16 text-center font-semibold text-main-green max-w-2xl">
           Kata Mereka
         </h2>
       </div>
@@ -59,10 +59,14 @@ const Testimonial = () => {
             {Array.from({ length: 4 }).map((_, index) => (
               <CarouselItem key={index}>
                 <div className="p-4">
-                  <div className="grid grid-cols-[1.3fr,2fr] shadow-lg w-full bg-gray-100">
-                    <Image src={UserImage} alt="user" />
-                    <div className="relative space-y-2 p-16">
-                      <p className="text-2xl">
+                  <div className="lg:grid grid-cols-[1.3fr,2fr] shadow-lg w-full bg-gray-100">
+                    <Image
+                      src={UserImage}
+                      alt="user"
+                      className="h-56 lg:h-auto w-full object-cover"
+                    />
+                    <div className="relative p-16">
+                      <p className="text-2xl mb-2">
                         <span className="font-semibold">Wasroni</span> |{" "}
                         <span className="font-light">Petani</span>
                       </p>
@@ -71,8 +75,7 @@ const Testimonial = () => {
                         amat dibantu dengan adanya Eratani. Terima kasih
                         Eratani!
                       </p>
-
-                      <Button className="bg-primary-yellow text-lg text-main-text hover:bg-primary-yellow/40 absolute right-16 bottom-16">
+                      <Button className="bg-primary-yellow text-lg text-main-text hover:bg-primary-yellow/40 mt-10 lg:absolute right-16 bottom-16">
                         <Image src={PlayIco} alt="play-ico" /> Putar Video
                       </Button>
                     </div>
@@ -81,8 +84,8 @@ const Testimonial = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="hidden lg:flex bg-primary-yellow text-main-text w-10 h-10 text-xl" />
+          <CarouselNext className="hidden lg:flex bg-primary-yellow text-main-text w-10 h-10 text-xl" />
         </Carousel>
         <div className="flex gap-x-6 items-center absolute bottom-0">
           {Array.from({ length: 4 }).map((_, indx) => (
@@ -91,7 +94,7 @@ const Testimonial = () => {
               onClick={() => handleDotClick(indx)}
               className={`${
                 current - 1 === indx ? "bg-primary-yellow" : "bg-gray-400"
-              } w-16 h-3 rounded-full cursor-pointer`}
+              } w-10 lg:w-16 h-2 lg:h-3 rounded-full cursor-pointer`}
             ></div>
           ))}
         </div>

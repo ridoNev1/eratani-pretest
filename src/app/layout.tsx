@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        className="antialiased text-main-text font-lato"
+        className="overflow-x-hidden antialiased text-main-text font-lato"
       >
         {children}
         <Toaster />
