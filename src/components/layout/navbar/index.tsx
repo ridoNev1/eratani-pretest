@@ -3,7 +3,7 @@
 import { MainLogo, MainWhiteLogo, MenuIco } from "@/assets";
 import { Button } from "@/components/ui/button";
 import useScroll from "@/custom-hook/use-scroll";
-import { CircleX, Menu } from "lucide-react";
+import { CircleX } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
