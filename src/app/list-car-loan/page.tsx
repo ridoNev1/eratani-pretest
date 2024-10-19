@@ -34,7 +34,10 @@ const ListUser = () => {
     <div className="custom-container-xl mt-10">
       <ModalAddCarLoan
         isOpen={modalAdd}
-        onChangeOpen={setModalAdd}
+        onChangeOpen={(val) => {
+          setModalAdd(val);
+          setDefaultValue(null);
+        }}
         onSubmitData={(data) =>
           setMainData((old) => [
             { ...data, id: (mainData[mainData.length - 1]?.id || 100) + 1 },
